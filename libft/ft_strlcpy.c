@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/13 21:48:13 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/13 23:40:06 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/13 23:45:09 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/13 23:53:24 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int				ft_strlen(char *str);
 
-unsigned long	ft_strlcat(char *dst, const char *src, unsigned int size)
-{
-	int		i;
-	char	*empty;
+#include <stdio.h>
+#include <string.h>
 
-	empty = dst;
-	i = ft_strlen((char *)src);
-	return (size + i);
+int main () {
+	char src[] = "12345678";
+	char dest[] = "12345";
+	int i;
+	i = strlcpy(src, dest, 5);
+
+	printf("Final value : %d\n", i);
+
+	return(0);
 }
