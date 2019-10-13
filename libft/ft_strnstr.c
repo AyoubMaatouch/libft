@@ -6,14 +6,14 @@
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 19:58:40 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/13 21:18:32 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/13 22:40:21 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strnstr(char *str, char *to_find, unsigned int n)
 {
-	int x;
-	int y;
+	unsigned int	x;
+	int				y;
 
 	x = 0;
 	y = 0;
@@ -28,4 +28,5 @@ char	*ft_strnstr(char *str, char *to_find, unsigned int n)
 		}
 		x++;
 	}
+	return (0);
 }
