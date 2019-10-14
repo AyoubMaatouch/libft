@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 15:15:59 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/14 16:19:24 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/14 16:02:22 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/14 16:18:58 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, unsigned int len)
+void	*ft_bzero(void *b, unsigned int len)
 {
 	unsigned int i;
 
 	i = 0;
 	while (len > i)
 	{
-		((char*)b)[i] = c;
+		((char*)b)[i] = 0;
 		i++;
 	}
 	return (0);
