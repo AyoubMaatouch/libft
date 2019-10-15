@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 18:20:53 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/15 22:49:49 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/15 23:53:57 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,14 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
       }
      j = 0;
       while (n > j)
-        {
-            ((char*)dest)[j] = cont[j];
+        {    
+            ((char*)src)[j] = cont[j];
             j++;
         }
 
       puts(cont);
+          return (dest);
+
  }
      
     //Non-overlap 
@@ -48,8 +50,8 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
         }
      }
        */
+      return (0);
         
-    return (dest);
 }
 int main ()
 {
