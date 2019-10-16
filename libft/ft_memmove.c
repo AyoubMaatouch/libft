@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 18:20:53 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/15 23:53:57 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/16 14:02:20 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,36 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     j = 0;
     
     /// with overlap
-    if(strlen(src) > strlen(dest))
+   if( src > dest && dest < src + n)
     {
-      while (i--)
-      {
-        cont[j] = ((char *)src)[j];
-        j++;
-      }
-     j = 0;
-      while (n > j)
-        {    
-            ((char*)src)[j] = cont[j];
-            j++;
-        }
+       src += n -1;
+      dest += n -1;
+      while (n--)
+        *(char *)dest-- = *(char *)src--;
+    }
 
-      puts(cont);
-          return (dest);
+/*
+ 
+            while (i--)
+                {
+                  cont[j] = *(char *)src++;
+                  j++;
+                }
+              j = 0;
+                while (n > j)
+                  {    
+                    *(char*)dest++ = cont[j];
+                      j++;
+                  }
+              printf("The j number : %zu\n", n);
+                puts(cont);
+                    return (dest);
 
- }
-     
+ 
+     */
     //Non-overlap 
      
-  /*   else
+    else
      {
       while (n > j)
         {
@@ -49,10 +57,11 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
             j++;
         }
      }
-       */
-      return (0);
+       
+      return (dest);
         
 }
+
 int main ()
 {
 char str[] = "123456789";
@@ -65,8 +74,8 @@ char str1[] = "123456789";
   memmove(str + 3, str , 7);
   ft_memmove(str1 + 3, str1 , 7);
 
-   puts (str);
-  puts (str1);
+   printf ("%s\n", str);
+   printf ("%s\n", str1);
   i = strlen(str1);
   printf("%d\n", i);
   return 0;

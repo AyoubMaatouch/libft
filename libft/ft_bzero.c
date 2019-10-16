@@ -6,11 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:02:22 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/14 16:18:58 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/16 13:14:57 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *b, unsigned int len)
+void	*ft_bzero(void *b, size_t len)
 {
 	unsigned int i;
 
