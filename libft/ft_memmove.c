@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 18:20:53 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/16 19:27:54 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/17 00:43:28 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,24 +28,43 @@ void *ft_memmove(void *dest, void *src, size_t n)
        while (i < n)
        {
        temp[i] = csrc[i];
-      i++;
+        i++;
        }
-  
+      // temp[i] = "\0";
+       
  
        i = 0;
-  while (i < n)
+  while (i <= n)
 {
          cdest[i] = temp[i]; 
          i++;
 }
-
    return (dest);
-}
+   
 
+     /*     if (src < dest)
+          {
+            while (n--)
+            {
+              ((char *)dest)[n] = ((char *)src)[n];
+            }
+          }
+          else 
+          {
+            //while ()
+          }
+
+          return (dest);
+          }
+*/
+}
 int main()
 {
-  char str[] = "123456789";
-  char str1[] = "123456789";
+  char *str = (char *)malloc(10);
+  char *str1 = (char *)malloc(10);
+
+  str = strcpy(str, "123456789");
+  str1 = strcpy(str1, "123456789");
 
   memmove(str + 3, str, 7);
 
