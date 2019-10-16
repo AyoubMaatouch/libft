@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/12 12:17:36 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/16 19:52:16 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/16 21:10:45 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/16 21:41:02 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *str)
-{
-	int i;
+#include<stdio.h>
+#include<stdlib.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+void *calloc(size_t count, size_t size)
+{
+    void *ptr;
+    int i = 0;
+    ptr = malloc(count * size);
+    while (count--)
+    {
+        *ptr = 0;
+        ptr++;
+       // i++;
+    }
+    return (ptr);
+}
+
+int main()
+{
+    char *str;
+       str = calloc(5, sizeof(char));
+
+       puts(str);
+return (0);
+
 }
