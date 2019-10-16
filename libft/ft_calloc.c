@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 21:10:45 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/16 21:41:02 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/16 22:08:31 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ void *calloc(size_t count, size_t size)
     ptr = malloc(count * size);
     while (count--)
     {
-        *ptr = 0;
-        ptr++;
-       // i++;
+       
     }
+    puts((char*)ptr);
     return (ptr);
 }
 
