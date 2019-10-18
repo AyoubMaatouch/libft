@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 21:10:45 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/18 11:55:01 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/18 19:59:21 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 	int		i;
 
 	i = 0;
+	if (size == 0 || count == 0)
+		return (0);
 	ptr = malloc(count * size);
 	while (count--)
 	{

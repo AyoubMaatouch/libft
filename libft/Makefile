@@ -1,6 +1,10 @@
-#make file - this is a comment section
- 
-all: libft
-    gcc -c *.c 
-libmylib.a: addSorted.o freeLinks.o #let's link library files into a static library
-        ar rc *.o
+#Makefile
+
+all: lib libft.a
+
+libft.a: lib	
+	ar rc libft.a *.o
+lib : *.c
+	gcc -c -Wall -Werror -Wextra *.c
+clean :
+	rm -rf *.o

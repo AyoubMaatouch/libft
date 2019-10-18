@@ -6,9 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 15:15:59 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/16 13:15:02 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/18 22:36:35 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
