@@ -3,41 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/18 16:45:13 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/19 19:52:37 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned int	ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 
-char			*ft_strtrim(char const *s1, char const *set)
+int			ft_strtrim(char const *s1, char const *set)
 {
-	char	*r_str;
-	int		i;
+	size_t size_s1 = ft_strlen(s1);
+	size_t size_set = ft_strlen(set);
+	int i = 0;
+		printf("%lu\n", ft_strlen(s1));
+			while (size_set > i)
+				{
+					if (*s1 == set[i])
+					{
+						s1++;
+						i = 0;
+					} 
+					else
+						i++;
+					
+				}
+		printf("%lu\n", ft_strlen(s1));
+			puts(s1);
 
-	if (s1 == NULL || set == NULL)
-		return (0);
-	r_str = (char *)malloc(ft_strlen(s1) * sizeof(char));
-	while (*set != 0)
-	{
-		if (*s1 == *set)
-		{
-			i = 0;
-			while (*s1 == *set && *s1 != 0)
-			{
-				r_str[i] = *set;
-				set++;
-				s1++;
-				i++;
-			}
-			return (r_str);
-		}
-		set++;
-	}
+		
+		return(0);
+}
+int main()
+{
+	printf("%d\n", ft_strtrim("b@@a@@ you can Find hello here@@@", "@b"));
 	return (0);
 }
