@@ -3,65 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:02:04 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/19 22:34:54 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/20 22:34:04 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 char **ft_split(char const *s, char c)
 {
-	int i = 0, n = 0;
+	size_t n_oc = 0;
+	char *s_ptr;
+	s_ptr = (char*)s;
 
-	while (s[i] != 0)
+	printf("%lu\n",strlen(s));
+
+	while (*s_ptr != 0)
 	{
-		if (s[i] == c)
-			n++;
-		i++;
+		if (*s_ptr == c)
+			n_oc++;
+		s_ptr++;
 	}
-
-	printf ("\n%d\n", n);
-	char **str = (char **)malloc( n * sizeof(char*));
+	printf("%lu\n",n_oc);
+	printf("%lu\n",strlen(s));
+	char **ptr;
+	ptr = (char**)malloc(n_oc * sizeof(char*));
+	int i = n_oc;
 	while (*s != 0)
 	{
-	if (*s == c)
-	{
-		i = 0;
-		while (*s != 0)
+		*ptr = (char *)s;
+		if(*s == c)   // and i + 1
 		{
-			*str[i] = '0';
 			s++;
-			i++;
-			if ( *s == c)
-			{/*	str++;
-				s--;*/
-				return (0);
-				break;
-			}
-		
-		}
-		
-	
-	}
-	s++;
+			ptr[i] = (char *)s;
+				//i++;
+			i--;
 
-}
-	return (str);
+		}
+		s++;
+	}
+	
+	return (ptr);
 }
 
 int main()
 {
-	char **str = ft_split( "a splite, a another split, aa", 'a');
+	char **str = ft_split( "asplite, aanother split", 'a');
 	int i = 0;
-	while ( str[i] != 0)
-	{
-		puts(str[i]);
-		i++;
-	}
+	
+		puts(str[1]);
+	
 	return (0);
 
 }
