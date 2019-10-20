@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/20 14:15:22 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/20 15:30:50 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,11 +105,13 @@ char			*ft_strtrim(char const *s1, char const *set)
 			{
 				re_str[i] = f_ptr[i];		
 				i++;
-			}	
+			}
+			if (ft_strlen(re_str) == 0)
+				return (0);	
 		return(re_str);
 }
 int main()
 {
-	printf("%s\n", ft_strtrim("@@@@@@@@123456789@x@@@", "x@"));
+	printf("%s\n", ft_strtrim("aaaa15161i5556aaaaa", "ia"));
 	return (0);
 }
