@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 12:20:18 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/18 12:50:52 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/20 17:17:33 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
-unsigned int	ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 
-char			*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 	size_t	i;
@@ -24,7 +23,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr = (char *)malloc(len * sizeof(char));
 	while (*s != '\0')
 	{
-		if (*s == 'a')
+		if (*s == (char)start)
 		{
 			if (ft_strlen(s) < len)
 				return (0);
