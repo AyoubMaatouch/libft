@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/19 22:43:58 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/20 14:15:22 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 
 size_t	ft_strlen(const char *str);
 
-int			ft_strtrim(char const *s1, char const *set)
-{
-	size_t size_s1 = ft_strlen(s1);
-	size_t size_set = ft_strlen(set);
-	char *l_ptr = (char *)s1 + size_s1 - 1;
-	char *f_ptr = (char *)s1;
 
-	int i = 0;
-		printf("%lu\n", ft_strlen(l_ptr));
-	//Backward Function ( add + 1)
+static char	*f_trim(char *l_ptr, const char *set)
+{		size_t size_set;
+		size_set = ft_strlen(set);
+
+	int i;
+	i = 0;
 	while ( size_set > i)
 	{
 		if (*l_ptr == set[i])
@@ -35,12 +32,61 @@ int			ft_strtrim(char const *s1, char const *set)
 					else
 						i++;
 	}
-		printf("%lu\n", ft_strlen(l_ptr));	
-				puts(l_ptr);
+	return (l_ptr);
+	}
 
-//Forward Function
-	printf("%lu\n", ft_strlen(f_ptr));
-		i = 0;
+static char	*b_trim(char *f_ptr, const char *set)
+{		size_t size_set;
+		size_set = ft_strlen(set);
+
+	int i;
+	i = 0;
+	while ( size_set > i)
+	{
+		if (*f_ptr == set[i])
+					{
+						f_ptr++;
+						i = 0;
+					} 
+					else
+						i++;
+	}
+	return (f_ptr);
+	}
+
+char			*ft_strtrim(char const *s1, char const *set)
+{
+	size_t size_s1;
+	size_t size_set;
+	char *l_ptr;
+	char *f_ptr;
+	char *re_str;
+	int i;
+	int re_length;
+	
+	size_s1 = ft_strlen(s1);
+	size_set = ft_strlen(set);
+	l_ptr = (char *)s1 + size_s1 - 1;
+	f_ptr = (char *)s1;
+	i = 0;
+	
+	l_ptr = f_trim(l_ptr,set);
+	//forward 
+/*	while ( size_set > i)
+	{
+		if (*l_ptr == set[i])
+					{
+						l_ptr--;
+						i = 0;
+					} 
+					else
+						i++;
+	}*/
+
+	f_ptr = b_trim( f_ptr, set);
+
+	//backword
+	/*	i = 0;
 		while (size_set > i)
 				{
 					if (* f_ptr == set[i])
@@ -51,29 +97,19 @@ int			ft_strtrim(char const *s1, char const *set)
 					else
 						i++;
 					
-				}
-				
-		printf("%lu\n", ft_strlen(f_ptr));	
-				puts(f_ptr);
-				int re_length = ((ft_strlen(f_ptr) - ft_strlen(l_ptr) + 1));
-		char *re_str;
+				}*/
+		re_length = ((ft_strlen(f_ptr) - ft_strlen(l_ptr) + 1));
 		re_str = (char *)malloc(re_length * sizeof(char));
-		
 			i = 0;
 			while (re_length > i)
 			{
-				puts (f_ptr);
-				re_str[i] = f_ptr[i];
-					
-					
-					i++;
-			}
-		printf("SizeOF The needed String : %d\n", re_length);
-		puts(re_str);
-		return(0);
+				re_str[i] = f_ptr[i];		
+				i++;
+			}	
+		return(re_str);
 }
 int main()
 {
-	printf("%d\n", ft_strtrim("@@@@@@@@123456789@x@@@", "x@"));
+	printf("%s\n", ft_strtrim("@@@@@@@@123456789@x@@@", "x@"));
 	return (0);
 }
