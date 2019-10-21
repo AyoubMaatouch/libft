@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:02:04 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/20 22:34:04 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/21 23:14:28 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,47 +16,54 @@
 
 char **ft_split(char const *s, char c)
 {
-	size_t n_oc = 0;
-	char *s_ptr;
-	s_ptr = (char*)s;
+  //occurance counting
+  char *occ_ptr = (char*)s;
+  int nb_occ = 0, i = 0;
+  while (occ_ptr[i] != 0)
+  {
+    if (occ_ptr[i] == c && occ_ptr[i + 1] != c)
+        nb_occ++;
+    i++;
+  }
+  char **g_ptr;
+  g_ptr = (char **)malloc(nb_occ * sizeof(char *));
+  int j = 0;
+  i = 0;
+  int n;
 
-	printf("%lu\n",strlen(s));
-
-	while (*s_ptr != 0)
-	{
-		if (*s_ptr == c)
-			n_oc++;
-		s_ptr++;
-	}
-	printf("%lu\n",n_oc);
-	printf("%lu\n",strlen(s));
-	char **ptr;
-	ptr = (char**)malloc(n_oc * sizeof(char*));
-	int i = n_oc;
-	while (*s != 0)
-	{
-		*ptr = (char *)s;
-		if(*s == c)   // and i + 1
-		{
-			s++;
-			ptr[i] = (char *)s;
-				//i++;
-			i--;
-
-		}
-		s++;
-	}
+  occ_ptr = (char*)s;
+  while (j <= nb_occ)
+    {
+      i = 0;
+      while (occ_ptr[i] != 0)
+      {
+        if (occ_ptr[i] == c && occ_ptr[i + 1] != c)
+            break;
+        i++;
+      }
+      g_ptr[j]= (char *)malloc(sizeof(char) * i);
+      
+      n = 0;
+      while (n < i)
+      {
+        g_ptr[j][n] = occ_ptr[n];
+        n++;
+      }
+      puts(g_ptr[j]);
+      occ_ptr = occ_ptr + i + 1;
+      
+      j++;
+    }
+ // printf("%d\n", j);
 	
-	return (ptr);
+
+	return (g_ptr);
 }
 
 int main()
 {
-	char **str = ft_split( "asplite, aanother split", 'a');
-	int i = 0;
-	
-		puts(str[1]);
-	
+	 ft_split( "123,  1234 split 12345", ' ');
+   
 	return (0);
 
 }
