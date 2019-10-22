@@ -6,7 +6,7 @@
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 22:14:35 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/22 23:29:40 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/23 00:13:39 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+//New Version
 int	ft_alloc(int nb, int nbr)
 {
 	static int i ;
