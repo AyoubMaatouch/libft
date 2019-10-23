@@ -30,7 +30,7 @@ int	ft_alloc(int nb, int nbr)
 	return (i); 
 }
 
-void 	ft_putnbr(size_t nb, char *nbr_r, const int num_alloc)
+void 	ft_putnbr(unsigned int nb, char *nbr_r, const int num_alloc)
 {
 	
 	if (nb > 9)
@@ -43,7 +43,7 @@ void 	ft_putnbr(size_t nb, char *nbr_r, const int num_alloc)
 }
 char *ft_itoa(int n)
 {
-	size_t n_nbr;
+	unsigned int n_nbr;
 	int num_alloc;
 	char *nbr_r;
 
@@ -65,7 +65,7 @@ int main()
 {
 
 
-	puts(ft_itoa(-123456789));
+	puts(ft_itoa(-2147483648));
 
 	return (0);
 }
