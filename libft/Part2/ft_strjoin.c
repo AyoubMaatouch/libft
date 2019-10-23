@@ -6,14 +6,14 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 15:57:30 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/20 17:08:08 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/23 13:39:44 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-size_t	ft_strlen(const char *str);
+size_t			ft_strlen(const char *str);
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {

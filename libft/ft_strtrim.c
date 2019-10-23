@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 13:39:15 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/20 16:17:27 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 static char	*f_trim(char *l_ptr, const char *set)
 {
-	size_t		size_set;
-	size_t		i;
+	size_t	size_set;
+	int		i;
 
 	size_set = ft_strlen(set);
 	i = 0;
@@ -35,8 +35,8 @@ static char	*f_trim(char *l_ptr, const char *set)
 
 static char	*b_trim(char *f_ptr, const char *set)
 {
-	size_t		size_set;
-	size_t		i;
+	size_t	size_set;
+	int		i;
 
 	size_set = ft_strlen(set);
 	i = 0;
@@ -55,11 +55,11 @@ static char	*b_trim(char *f_ptr, const char *set)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	char		*l_ptr;
-	char		*f_ptr;
-	char		*re_str;
-	size_t		i;
-	size_t		re_length;
+	char	*l_ptr;
+	char	*f_ptr;
+	char	*re_str;
+	int		i;
+	int		re_length;
 
 	l_ptr = (char *)s1 + ft_strlen(s1) - 1;
 	f_ptr = (char *)s1;
@@ -77,3 +77,9 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	return (re_str);
 }
+
+ int main()
+	 {
+		       printf("%s\n", ft_strtrim("aaaa15161i5556aaaaa", "ia"));
+		         return (0);
+				  }
