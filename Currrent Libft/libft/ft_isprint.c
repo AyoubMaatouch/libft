@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/12 13:21:14 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/12 15:41:53 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
-void ft_putchar_fd(char c, int fd)
+int	ft_isprint(char c)
 {
-	write(fd, &c, 1);
+	if (c >= 0 && c <= 31)
+	{
+		return (0);
+	}
+	return (1);
 }
-
-int main()
-
-{
-	ft_putchar_fd('c', 2);
-	return (0);
-}
-

@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/12 15:57:53 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/23 21:50:26 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
-void ft_putchar_fd(char c, int fd)
+int	ft_tolower(char c)
 {
-	write(fd, &c, 1);
+		if (c >= 'A' && c <= 'Z')
+			c = c + 32;
+	return (c);
 }
-
-int main()
-
-{
-	ft_putchar_fd('c', 2);
-	return (0);
-}
-

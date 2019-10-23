@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/12 22:48:51 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/13 15:58:41 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
-void ft_putchar_fd(char c, int fd)
+char	*ft_strchr(const char *str, int c)
 {
-	write(fd, &c, 1);
+	int i;
+
+	i = 0;
+	while (str[i] != c)
+	{
+		i++;
+		if (str[i] == '\0')
+			return (0);
+	}
+	return ((char *)&str[i]);
 }
-
-int main()
-
-{
-	ft_putchar_fd('c', 2);
-	return (0);
-}
-

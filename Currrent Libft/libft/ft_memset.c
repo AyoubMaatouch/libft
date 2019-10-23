@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/14 15:15:59 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/18 22:36:35 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <stdio.h>
 
-void ft_putchar_fd(char c, int fd)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	write(fd, &c, 1);
-}
+	unsigned int i;
 
-int main()
-
-{
-	ft_putchar_fd('c', 2);
+	i = 0;
+	while (len > i)
+	{
+		((char*)b)[i] = c;
+		i++;
+	}
 	return (0);
 }
-

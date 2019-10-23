@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/12 12:50:52 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/12 13:01:16 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
-void ft_putchar_fd(char c, int fd)
+int	ft_isalnum(char str)
 {
-	write(fd, &c, 1);
-}
-
-int main()
-
-{
-	ft_putchar_fd('c', 2);
+	if ((str >= 65 && str <= 90) || (str >= 97 && str <= 122)
+			|| (str >= 48 && str <= 57))
+	{
+		return (1);
+	}
 	return (0);
 }
-

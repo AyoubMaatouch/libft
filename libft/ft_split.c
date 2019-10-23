@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:02:04 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 18:34:17 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/22 19:24:00 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void			*dp_print(char *g_ptr, char *occ_ptr, char c, int i)
 static void		free_ptr(char **ptr, int j)
 {
 	while (j)
-		free(ptr[j--]);
+		free(&ptr[j--]);
 	free(ptr);
 }
 
@@ -83,10 +83,9 @@ char			**ft_split(char const *s, char c)
 	while (j < nb_occ)
 	{
 		i = str_len(occ_ptr, c);
-		g_ptr[j] = NULL;
-		if (!(g_ptr[j] = NULL))
+		if (!(g_ptr[j] = (char *)malloc(sizeof(char) * i)))
 		{
-			free_ptr(g_ptr, j);
+			free_ptr(g_ptr, j - 1);
 			return (NULL);
 		}
 		dp_print(g_ptr[j], occ_ptr, c, i);
@@ -95,11 +94,4 @@ char			**ft_split(char const *s, char c)
 	}
 	g_ptr[j] = NULL;
 	return (g_ptr);
-}
-
-
-int main() {
-	char **str=ft_split("hello hello", ' ');
-	printf("%s\n", str[0]);
-	return 0;
 }

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/23 16:03:15 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/23 20:14:38 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include<unistd.h>
+size_t	ft_strlen(const char *str);
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd);
+
+void ft_putstr_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
-}
+	size_t i;
 
-int main()
-
-{
-	ft_putchar_fd('c', 2);
-	return (0);
+	i = -1;
+	while (++i < ft_strlen(s))
+		ft_putchar_fd(s[i], fd);
 }
 

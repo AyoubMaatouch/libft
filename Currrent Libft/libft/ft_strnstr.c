@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/13 19:58:40 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/13 22:40:21 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
-void ft_putchar_fd(char c, int fd)
+char	*ft_strnstr(char *str, char *to_find, unsigned int n)
 {
-	write(fd, &c, 1);
-}
+	unsigned int	x;
+	int				y;
 
-int main()
-
-{
-	ft_putchar_fd('c', 2);
+	x = 0;
+	y = 0;
+	while (x < n)
+	{
+		y = 0;
+		while (str[x + y] == to_find[y])
+		{
+			if (to_find[y + 1] == '\0')
+				return (&str[x]);
+			y++;
+		}
+		x++;
+	}
 	return (0);
 }
-

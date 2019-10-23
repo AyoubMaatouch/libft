@@ -6,12 +6,18 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 23:40:44 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/22 19:19:09 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/23 22:02:28 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-int				ft_atoi(char *str);
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+
+int				ft_atoi(const char *str);
 void			*ft_bzero(void *b, size_t len);
 void			*ft_calloc(size_t count, size_t size);
 int				ft_isalnum(char str);
@@ -38,3 +44,5 @@ int				ft_toupper(int c);
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+
+#endif

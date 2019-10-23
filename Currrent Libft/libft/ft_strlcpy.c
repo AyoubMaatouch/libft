@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:01:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:34:30 by aymaatou         ###   ########.fr       */
+/*   Created: 2019/10/13 23:45:09 by aymaatou          #+#    #+#             */
+/*   Updated: 2019/10/18 22:37:23 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <stdio.h>
 
-void ft_putchar_fd(char c, int fd)
+int				ft_strlen(char *str);
+
+unsigned long	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	write(fd, &c, 1);
+	size_t i;
+
+	i = 0;
+	while (size - 1 > i)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen((char *)src));
 }
-
-int main()
-
-{
-	ft_putchar_fd('c', 2);
-	return (0);
-}
-
