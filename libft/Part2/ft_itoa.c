@@ -30,15 +30,13 @@ int	ft_alloc(int nb, int nbr)
 	return (i); 
 }
 
-void 	ft_putnbr(size_t nb, char *nbr_r, int num_alloc)
+void 	ft_putnbr(size_t nb, char *nbr_r, const int num_alloc)
 {
-//	static int i;
 	
 	if (nb > 9)
 	{
 		nbr_r[num_alloc] = nb % 10 + 48;
-		num_alloc--;
-		ft_putnbr(nb / 10, nbr_r, num_alloc);
+		ft_putnbr(nb / 10, nbr_r, num_alloc - 1);
 	}
 	else
 		nbr_r[num_alloc] = nb % 10 + 48;
@@ -57,20 +55,17 @@ char *ft_itoa(int n)
 	num_alloc = ft_alloc(n_nbr, n);
 	if (!(nbr_r = (char*)malloc(num_alloc * sizeof(char) + 1)))
 		return (NULL);
-//	printf("%d\n", num_alloc);
 	if (n < 0)
-	{
 		nbr_r[0] = '-';
-		nbr_r++;
-	}
-	ft_putnbr(n_nbr, nbr_r, num_alloc);
+	ft_putnbr(n_nbr, nbr_r, num_alloc - 1);
+	nbr_r[num_alloc] = 0;
 	return (nbr_r);
 }
 int main()
 {
 
 
-	puts(ft_itoa(19987));
+	puts(ft_itoa(-123456789));
 
 	return (0);
 }
