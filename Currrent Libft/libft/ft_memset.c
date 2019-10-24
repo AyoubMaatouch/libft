@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 15:15:59 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/18 22:36:35 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 15:34:45 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		((char*)b)[i] = c;
 		i++;
 	}
-	return (0);
+	return (b);
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 12:50:52 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/12 13:01:16 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 15:01:01 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char str)
+int	ft_isalnum(int str)
 {
 	if ((str >= 65 && str <= 90) || (str >= 97 && str <= 122)
 			|| (str >= 48 && str <= 57))

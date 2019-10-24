@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:42:18 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/17 16:15:04 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 18:17:55 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned int i;
 
 	i = 0;
+	if ((dest) == 0 && (src) == 0)
+		return (NULL);
 	while (n > i)
 	{
 		((char*)dest)[i] = ((char *)src)[i];
@@ -24,5 +26,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		if (((char*)dest)[i] == c)
 			break ;
 	}
-	return (0);
+	return ((unsigned char *)dest);
 }

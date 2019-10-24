@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 15:57:30 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 13:39:44 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 16:26:07 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if ((ft_strlen(s1) == 0 && ft_strlen(s2) == 0))
 		return (0);
-	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char));
+	if (!(str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char))))
+		return (NULL);
 	while (ft_strlen(s1))
 	{
 		str[i] = *s1;

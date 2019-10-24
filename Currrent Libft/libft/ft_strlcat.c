@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 21:48:13 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/17 19:18:27 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 20:04:24 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ unsigned long	ft_strlcat(char *dst, const char *src, size_t size)
 	{
 		dst[l_dest] = src[i];
 		i++;
-		if (size >= l_dest)
+		if (size >= l_dest && src[i] != 0)
 			return (l_dest + size);
 	}
-	dst[l_dest] = '\0';
+	dst[l_dest] = 0;
 	return (l_src + l_dest);
 }

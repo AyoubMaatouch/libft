@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 15:57:53 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:50:26 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 15:01:44 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 		if (c >= 'A' && c <= 'Z')
 			c = c + 32;

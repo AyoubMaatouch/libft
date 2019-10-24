@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 15:06:12 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 21:52:55 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 15:34:16 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 		if (c >= 'a' && c <= 'z')
 			c = c - 32;

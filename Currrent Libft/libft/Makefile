@@ -6,7 +6,7 @@
 #    By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 23:34:45 by aymaatou          #+#    #+#              #
-#    Updated: 2019/10/23 20:04:38 by aymaatou         ###   ########.fr        #
+#    Updated: 2019/10/24 16:29:57 by aymaatou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,3 +23,5 @@ clean :
 fclean: clean
 	rm -rf $(NAME)
 re: fclean all
+
+.PHONY : clean fclean re all $(NAME)

@@ -6,14 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:02:04 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/22 19:24:00 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 18:48:29 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-
+#include "libft.h"
 int				nb(char *occ_ptr, char c)
 {
 	int i;
@@ -79,7 +76,8 @@ char			**ft_split(char const *s, char c)
 		s++;
 	occ_ptr = (char*)s;
 	nb_occ = nb(occ_ptr, c);
-	g_ptr = (char **)malloc(nb_occ * sizeof(char *) + 1);
+	if (!(g_ptr = (char **)malloc(nb_occ * sizeof(char *) + 1)))
+		return (NULL);
 	while (j < nb_occ)
 	{
 		i = str_len(occ_ptr, c);
@@ -92,6 +90,6 @@ char			**ft_split(char const *s, char c)
 		occ_ptr += i + 1;
 		j++;
 	}
-	g_ptr[j] = NULL;
+	//g_ptr[j] = 0;
 	return (g_ptr);
 }
