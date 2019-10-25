@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:11:56 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 20:14:11 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 23:42:36 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-size_t	ft_strlen(const char *str);
 
-void	ft_putchar_fd(char c, int fd);
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

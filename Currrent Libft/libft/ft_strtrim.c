@@ -6,12 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 18:33:46 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 19:28:57 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static char	*f_trim(char *l_ptr, const char *set)
 {
@@ -70,7 +69,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	f_ptr = b_trim(f_ptr, set);
 	re_length = ((ft_strlen(f_ptr) - ft_strlen(l_ptr) + 1));
 	if (!(re_str = (char *)malloc(re_length * sizeof(char) + 1)))
-	return (NULL);
+		return (NULL);
 	while (re_length > i)
 	{
 		re_str[i] = f_ptr[i];

@@ -6,11 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 22:14:35 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 18:58:54 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 23:55:48 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int		ft_alloc(int nb, int nbr)
 {
@@ -26,26 +26,18 @@ static int		ft_alloc(int nb, int nbr)
 	return (i);
 }
 
-static void	ft_putnbr(unsigned int nb, char *nbr_r, int num_alloc)
+static void		ft_putnbr(unsigned int nb, char *nbr_r, int num_alloc)
 {
-	/*if (nb > 9)
+	while (nb > 9)
 	{
 		nbr_r[num_alloc] = nb % 10 + 48;
-		ft_putnbr(nb / 10, nbr_r, num_alloc - 1);
+		nb /= 10;
+		num_alloc--;
 	}
-	else
-		nbr_r[num_alloc] = nb % 10 + 48;
-		*/
-	  while (nb > 9)
-  {
-    nbr_r[num_alloc] = nb % 10 + 48;
-    nb/= 10;
-    num_alloc --;
-  }
-  nbr_r[num_alloc] = nb % 10 + 48;
+	nbr_r[num_alloc] = nb % 10 + 48;
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	unsigned int	n_nbr;
 	int				num_alloc;

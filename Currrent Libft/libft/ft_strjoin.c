@@ -6,16 +6,13 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 15:57:30 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 16:26:07 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 18:38:10 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-size_t			ft_strlen(const char *str);
-
-char			*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		i;

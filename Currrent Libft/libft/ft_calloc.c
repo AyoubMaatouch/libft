@@ -6,14 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 21:10:45 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 16:48:33 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 23:56:56 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-void	*ft_bzero(void *b, size_t len);
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

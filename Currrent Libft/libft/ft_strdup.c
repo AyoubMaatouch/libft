@@ -6,14 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 19:38:45 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 16:39:09 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 19:22:47 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

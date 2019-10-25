@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 17:56:13 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 16:23:21 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 19:35:36 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@ int	ft_atoi(const char *str)
 	int		i;
 	long	number;
 	int		sign;
-	int		l_i;
 
-	l_i = 0;
 	sign = 1;
 	i = 0;
 	number = 0;
@@ -35,11 +33,6 @@ int	ft_atoi(const char *str)
 			return (number * sign);
 		number = number * 10 + (str[i] - 48);
 		i++;
-		l_i++;
-		if (l_i > 10 && sign == 1)
-    	  	return (-1);
-   		if (l_i > 10 && sign == -1)
-     		 return (0);
 	}
 	return (number * sign);
 }

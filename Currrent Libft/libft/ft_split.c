@@ -6,11 +6,12 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:02:04 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 18:48:29 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 18:40:01 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int				nb(char *occ_ptr, char c)
 {
 	int i;
@@ -90,6 +91,5 @@ char			**ft_split(char const *s, char c)
 		occ_ptr += i + 1;
 		j++;
 	}
-	//g_ptr[j] = 0;
 	return (g_ptr);
 }

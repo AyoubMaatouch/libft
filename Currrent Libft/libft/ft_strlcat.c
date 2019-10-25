@@ -6,13 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 21:48:13 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 20:04:24 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 18:37:31 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int				ft_strlen(char *str);
+#include "libft.h"
 
 unsigned long	ft_strlcat(char *dst, const char *src, size_t size)
 {

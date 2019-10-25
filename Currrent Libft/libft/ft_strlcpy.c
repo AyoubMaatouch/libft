@@ -6,13 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 23:45:09 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 20:01:30 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 18:36:47 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int				ft_strlen(char *str);
+#include "libft.h"
 
 unsigned long	ft_strlcpy(char *dst, const char *src, size_t size)
 {

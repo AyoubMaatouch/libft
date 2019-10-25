@@ -6,30 +6,35 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 18:20:53 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/17 16:14:08 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 23:58:14 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, void *src, size_t n)
 {
-	char	temp[n];
 	size_t	i;
 
-	i = -1;
-	while (++i < n)
-		temp[i] = ((char *)src)[i];
-	i = -1;
-	if (dest > src)
+	i = 0;
+	if (dest == 0 && src == 0)
+		return (0);
+	if (dest > src && src + n > dest)
 	{
-		while (++i < n)
-			((char *)dest)[i] = temp[i];
+		while (n)
+		{
+			((char*)dest)[n - 1] = ((char*)src)[n - 1];
+			n--;
+		}
 	}
 	else
 	{
-		while (++i < n)
+		while (n)
+		{
 			((char *)dest)[i] = ((char *)src)[i];
+			i++;
+			n--;
+		}
 	}
 	return (dest);
 }

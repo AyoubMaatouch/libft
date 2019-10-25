@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 18:20:42 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 18:40:13 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 23:42:13 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar_fd(char c, int fd);
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

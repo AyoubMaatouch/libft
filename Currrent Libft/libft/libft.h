@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 23:40:44 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/23 22:02:28 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/25 18:43:05 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,19 @@ unsigned long	ft_strlcat(char *dst, const char *src, size_t size);
 unsigned long	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
-char			*ft_strnstr(char *str, char *to_find, unsigned int n);
+char			*ft_strnstr(const char *str, const char *to_find, size_t n);
 char			*ft_strrchr(const char *str, int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 char			*ft_strtrim(char const *s1, char const *set);
-char			*ft_strsub(char const *s, unsigned int start, size_t len);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
+void			ft_putstr_fd(char *s, int fd);
+char			**ft_split(char const *s, char c);
+char			*ft_itoa(int n);
 
 #endif

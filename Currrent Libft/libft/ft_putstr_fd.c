@@ -6,17 +6,13 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:03:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 19:02:48 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/24 23:51:48 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-
-void	ft_putchar_fd(char c, int fd);
-
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	size_t i;
 
@@ -24,4 +20,3 @@ void ft_putstr_fd(char *s, int fd)
 	while (++i < ft_strlen(s))
 		ft_putchar_fd(s[i], fd);
 }
-
