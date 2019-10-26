@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:42:18 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/25 18:33:56 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/26 23:36:17 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 			break ;
 		}
 	}
-	if (ft_strlen(dest) != 0 && i != 0)
-		return (NULL);
-	return (dest + i + 1);
+	if (ft_strlen(dest) != 0 && i != n)
+		return (dest + i + 1);
+	return (NULL);
 }

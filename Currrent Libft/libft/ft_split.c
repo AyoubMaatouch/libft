@@ -6,13 +6,13 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:02:04 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/25 18:40:01 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/27 00:01:45 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				nb(char *occ_ptr, char c)
+static int			nb(char *occ_ptr, char c)
 {
 	int i;
 	int nb_occ;
@@ -28,7 +28,7 @@ int				nb(char *occ_ptr, char c)
 	return (nb_occ);
 }
 
-void			*dp_print(char *g_ptr, char *occ_ptr, char c, int i)
+static void			*dp_print(char *g_ptr, char *occ_ptr, char c, int i)
 {
 	int n;
 
@@ -44,14 +44,14 @@ void			*dp_print(char *g_ptr, char *occ_ptr, char c, int i)
 	return (g_ptr);
 }
 
-static void		free_ptr(char **ptr, int j)
+static void			free_ptr(char **ptr, int j)
 {
 	while (j)
 		free(&ptr[j--]);
 	free(ptr);
 }
 
-static int		str_len(char *occ_ptr, char c)
+static int			str_len(char *occ_ptr, char c)
 {
 	int i;
 
@@ -65,7 +65,7 @@ static int		str_len(char *occ_ptr, char c)
 	return (i);
 }
 
-char			**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	char			**g_ptr;
 	char			*occ_ptr;

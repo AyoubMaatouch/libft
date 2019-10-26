@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 15:57:30 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/25 18:38:10 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/26 18:06:27 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	i = 0;
-	if ((ft_strlen(s1) == 0 && ft_strlen(s2) == 0))
-		return (0);
-	if (!(str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char))))
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	if (!(str = (char *)malloc((ft_strlen(s1) +
+						ft_strlen(s2)) * sizeof(char) + 1)))
 		return (NULL);
 	while (ft_strlen(s1))
 	{

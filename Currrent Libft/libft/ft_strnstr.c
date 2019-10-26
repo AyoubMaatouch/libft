@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 19:58:40 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/25 18:39:16 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/27 00:38:25 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,27 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
-	unsigned int	x;
-	int				y;
+	char	*ptr;
+	int		i;
 
-	x = 0;
-	y = 0;
-	if (to_find == 0)
+	i = 0;
+	if (!(ft_strlen(to_find)))
 		return ((char*)str);
-	while (x < n && str[x] != 0)
+	while (*str != 0 && n--)
 	{
-		y = 0;
-		while (str[x + y] == to_find[y] && n)
+		if (*str == *to_find)
 		{
-			if (to_find[y + 1] == '\0')
-				return (&((char *)str)[x]);
-			y++;
-			n--;
+			ptr = (char*)str;
+			i = 0;
+			while (*str == to_find[i++] && *str && *to_find && n > 0)
+			{
+				if (to_find[i] == 0 && n != 0 && to_find)
+					return (ptr);
+				str++;
+				n--;
+			}
 		}
-		x++;
+		str++;
 	}
 	return (0);
 }

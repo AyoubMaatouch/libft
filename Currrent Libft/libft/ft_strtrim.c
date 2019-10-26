@@ -6,13 +6,13 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/25 19:28:57 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/26 16:11:46 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*f_trim(char *l_ptr, const char *set)
+static char	*b_trim(char *l_ptr, const char *set)
 {
 	size_t		size_set;
 	size_t		i;
@@ -32,7 +32,7 @@ static char	*f_trim(char *l_ptr, const char *set)
 	return (l_ptr);
 }
 
-static char	*b_trim(char *f_ptr, const char *set)
+static char	*f_trim(char *f_ptr, const char *set)
 {
 	size_t		size_set;
 	size_t		i;
@@ -41,7 +41,7 @@ static char	*b_trim(char *f_ptr, const char *set)
 	i = 0;
 	while (size_set > i)
 	{
-		if (*f_ptr == set[i])
+		if (*f_ptr == set[i] && *f_ptr != 0)
 		{
 			f_ptr++;
 			i = 0;
@@ -65,8 +65,10 @@ char		*ft_strtrim(char const *s1, char const *set)
 	l_ptr = (char *)s1 + ft_strlen(s1) - 1;
 	f_ptr = (char *)s1;
 	i = 0;
-	l_ptr = f_trim(l_ptr, set);
-	f_ptr = b_trim(f_ptr, set);
+	f_ptr = f_trim(f_ptr, set);
+	if (f_ptr[0] == '\0')
+		return (f_ptr);
+	l_ptr = b_trim(l_ptr, set);
 	re_length = ((ft_strlen(f_ptr) - ft_strlen(l_ptr) + 1));
 	if (!(re_str = (char *)malloc(re_length * sizeof(char) + 1)))
 		return (NULL);
@@ -76,7 +78,5 @@ char		*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	re_str[i] = 0;
-	if (ft_strlen(re_str) == 0)
-		return (0);
 	return (re_str);
 }
