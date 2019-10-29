@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/29 15:19:39 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 19:06:14 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t		i;
 	size_t		re_length;
 
-	if (!s1)
-		return (NULL);
-	if (!set)
-		return (NULL);
+	if (!s1 || !set)
+		return ((char*)s1);
 	l_ptr = (char *)s1 + ft_strlen(s1) - 1;
 	f_ptr = (char *)s1;
 	i = -1;
