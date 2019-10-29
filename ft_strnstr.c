@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 19:58:40 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/27 16:57:23 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 15:16:26 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	int		i;
 
 	i = 0;
+	if (ft_strlen(to_find) > ft_strlen(str))
+		return (NULL);
 	if (!(ft_strlen(to_find)) || to_find == str)
 		return ((char*)str);
 	while (*str != 0 && n--)

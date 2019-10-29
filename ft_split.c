@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:02:04 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/28 22:22:03 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 15:17:46 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char		**ft_split(char const *s, char c)
 	int				nb_c;
 	static int		j;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	nb_words = ft_nb_words(s, c);
 	if (!(g_ptr = (char**)malloc(sizeof(char*) * (nb_words + 1))))

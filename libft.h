@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 23:40:44 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/26 17:21:52 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 15:14:45 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 int				ft_atoi(const char *str);
 void			*ft_bzero(void *b, size_t len);
 void			*ft_calloc(size_t count, size_t size);
-int				ft_isalnum(char str);
-int				ft_isalpha(char str);
+int				ft_isalnum(int str);
+int				ft_isalpha(int str);
 int				ft_isascii(int c);
-int				ft_isdigit(char str);
-int				ft_isprint(char c);
+int				ft_isdigit(int c);
+int				ft_isprint(int c);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -36,7 +36,7 @@ char			*ft_strdup(const char *s1);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
-int				ft_strncmp(char *s1, char *s2, unsigned int n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *str, const char *to_find, size_t n);
 char			*ft_strrchr(const char *str, int c);
 int				ft_tolower(int c);
