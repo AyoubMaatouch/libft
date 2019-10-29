@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 23:45:09 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/29 17:41:21 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:24:13 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	return (len + size);
+	return (len);
 }
