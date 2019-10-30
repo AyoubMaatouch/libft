@@ -6,14 +6,13 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 23:40:44 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/29 15:56:39 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 20:33:00 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
 

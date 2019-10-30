@@ -6,11 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:24:13 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/24 22:39:33 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 20:32:08 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

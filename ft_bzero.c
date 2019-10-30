@@ -6,11 +6,11 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:02:22 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/18 22:35:38 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/10/29 20:31:33 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_bzero(void *b, size_t len)
 {
