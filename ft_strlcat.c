@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 21:48:13 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/29 15:02:32 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/11/03 17:02:28 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	int i;
 	int lens;
 
-	if ((!dst || !src) && size == 0)
-		return (ft_strlen(src));
 	lens = ft_strlen(src);
 	i = 0;
-	while (*dst && size)
+	if (dst)
 	{
-		size--;
-		i++;
-		dst++;
+		while (*dst && size)
+		{
+			size--;
+			i++;
+			dst++;
+		}
 	}
 	while (*src && size > 1)
 	{

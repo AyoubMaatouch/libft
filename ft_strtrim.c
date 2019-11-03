@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 16:25:15 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/30 18:54:43 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/11/01 16:42:51 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	i = -1;
 	f_ptr = f_trim(f_ptr, set);
 	if (f_ptr[0] == '\0')
-		return (f_ptr);
+		return (ft_strdup(f_ptr));
 	l_ptr = b_trim(l_ptr, set);
 	re_length = ((ft_strlen(f_ptr) - ft_strlen(l_ptr) + 1));
 	if (!(re_str = (char *)malloc(sizeof(char) * (re_length + 1))))

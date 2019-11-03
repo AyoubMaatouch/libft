@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 23:45:09 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/29 18:24:13 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/11/03 12:40:31 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	len = ft_strlen(src);
-	if (size != 0)
+	if (size)
 	{
 		while (i < size - 1 && src[i] != 0)
 		{

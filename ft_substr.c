@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 12:20:18 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/27 16:46:53 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/11/02 18:26:27 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	j = 0;
 	if (s == NULL)
 		return (NULL);
-	if (!(ptr = (char *)malloc(len * sizeof(char) + 1)))
+	if (ft_strlen(s) < start)
+		len = 0;
+	if (!(ptr = (char *)malloc((len * sizeof(char)) + 1)))
 		return (NULL);
-	while (s[j] != '\0')
+	while (len && s[j])
 	{
-		if (j == start)
-		{
-			if (ft_strlen(s) < len)
-				return (NULL);
-			while (len > i)
-				ptr[i++] = s[j++];
-			ptr[i] = 0;
-			return (ptr);
-		}
-		j++;
+		ptr[i++] = s[start + j++];
+		len--;
 	}
 	ptr[i] = 0;
 	return (ptr);

@@ -6,7 +6,7 @@
 #    By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 23:34:45 by aymaatou          #+#    #+#              #
-#    Updated: 2019/10/29 16:07:13 by aymaatou         ###   ########.fr        #
+#    Updated: 2019/11/01 17:11:22 by aymaatou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
@@ -20,14 +20,17 @@ NAME = libft.a
 
 all: $(NAME)
 
-$(NAME):lib
-	ar rc $(NAME) *.o
-lib : *.c
+$(NAME): 
 	gcc -c -Wall -Werror -Wextra $(SRC)
+	ar rc $(NAME) *.o 
+	$(info *********Your Libft is Ready*********)
 clean :
 	rm -rf *.o
+	$(info !!!!!!!!!! Deleting object files !!!!!!!!!!)
 fclean: clean
 	rm -rf $(NAME)
+	$(info !!!!!!!!!! Deleting all files !!!!!!!!!!)
 re: fclean all
 
-.PHONY : clean fclean re all $(NAME)
+.PHONY : all clean fclean re $(NAME)
+.SILENT: all clean fclean re $(NAME)

@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 22:48:51 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/25 18:30:26 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/11/03 18:33:11 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_strchr(const char *str, int c)
 	int i;
 
 	i = 0;
-	while (str[i] != c)
+	while (*str != '\0')
 	{
-		i++;
-		if (str[i] == '\0' && c == '\0')
-			return ((char *)&str[i]);
-		if (str[i] == '\0')
-			return (NULL);
+		if (*str == c)
+			return ((char *)str);
+		str++;
 	}
-	return ((char *)&str[i]);
+	if (c == '\0')
+		return ((char*)str);
+	return (NULL);
 }

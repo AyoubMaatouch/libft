@@ -6,7 +6,7 @@
 /*   By: aymaatou <aymaatou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:02:22 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/29 20:31:33 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/11/02 20:00:26 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_bzero(void *b, size_t len)
 	i = 0;
 	while (len > i)
 	{
-		((char*)b)[i] = 0;
+		((unsigned char*)b)[i] = 0;
 		i++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: aymaatou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 20:39:16 by aymaatou          #+#    #+#             */
-/*   Updated: 2019/10/30 22:40:01 by aymaatou         ###   ########.fr       */
+/*   Updated: 2019/11/03 17:03:35 by aymaatou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,22 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
-	char	*ptr;
-	int		i;
+	size_t			i;
+	size_t			j;
 
-	if (ft_strlen(to_find) != 0 && n == 0)
-		return (NULL);
-	if (n == 0 || *to_find == 0 || to_find == NULL
-			|| to_find == str || ft_strlen(to_find) == 0)
-		return ((char *)str);
-	while (*str != 0 && n--)
+	i = 0;
+	if (ft_strlen(to_find) == 0)
+		return ((char*)str);
+	while (str[i] && i < n)
 	{
-		if (*str == *to_find)
+		j = 0;
+		while (str[i + j] == to_find[j] && i + j < n)
 		{
-			ptr = (char*)str;
-			i = 0;
-			while (*str == to_find[i++] && *str && *to_find && n > 0)
-			{
-				if (to_find[i] == 0 && n != 0 && to_find)
-					return (ptr);
-				str++;
-				n--;
-			}
+			j++;
+			if (to_find[j] == '\0')
+				return ((char*)&str[i]);
 		}
-		str++;
+		i++;
 	}
 	return (NULL);
 }
